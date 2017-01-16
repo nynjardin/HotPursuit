@@ -2,14 +2,13 @@
 Hot Pursuit GTA-V FiveReborn Gamemode
 
 [Ordre des choses]
-
 Quand le joueur se connecte, verifier s'il y a une crouse en cours.
 	s'il y en a une, mettre le joueur en specateur
 		en appuyant sur une touche, il passe d'un joueur a l'autre
 	s'il y en a pas le faire appraitre normalement
 Mettre le joueur avec un niveau de recherche a 0
 Les joueurs choisissent une voiture (a choisir dans un menu - s'inpirer d'une version simplifié de vehshop)
-	des qu'ils arrisent dans le jeux un menu apparait et ils sont dans le magasin de voiture
+	Des qu'ils arrisent dans le jeux un menu apparait et ils sont dans le magasin de voiture
 Determiner que quand un joueur a choisis sa voiture, il apparait directement dedans et il est "pret"
 Les voiture ne peuvent pas bouger en attendant les autres joueurs
 Quand tous les joueurs sont prêt afficher un compte a rebourg et commencer la courses
@@ -34,11 +33,9 @@ Recuperer nom du joueur gagnant
 ->Les faires être prêt quand ils entrent dans une voiture
 ->Les joueurs sont directement recherché niveau 5
 
-
 [A VERIFIER]
 -Détecter quand un joueur s'est fait tué/quand il a finit une course
 -Mettre ce joueur en spectateur
-
 
 [A FAIRE]
 -Definir un objectif aleatoire parmis une liste
@@ -46,7 +43,6 @@ Recuperer nom du joueur gagnant
 -S'il ne reste qu'un joueur, il a gagné et tout le monde re-apparait
 -Donner un point au dernier en vie
 -Dessiner un tableau des scores
-
 
 [A VOIR]
 -Mettre des Check Point (10-15 a voir ceux present sur la map "race-test" en les faisant apparaitre sur la map via des blip ect...)
