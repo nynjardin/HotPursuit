@@ -2,6 +2,7 @@
 Hot Pursuit GTA-V FiveReborn Gamemode
 
 [Ordre des choses]
+
 Quand le joueur se connecte, verifier s'il y a une crouse en cours.
 	s'il y en a une, mettre le joueur en specateur
 		en appuyant sur une touche, il passe d'un joueur a l'autre
