@@ -6,6 +6,4 @@ description 'Gamemode by Nynjardin.'
 
 client_script 'hotpursuit.lua'
 client_script 'garage.lua'
---client_script 'menu.lua'
-client_script 'speedo.lua'
 server_script 'hp_server.lua'
