@@ -26,7 +26,7 @@ local insideGarage = { --1 x, y, z, vehicleHeading, pedHeading
     {x = -693.727, y = -757.278, z = 33.684, vh = 228.2736, ph = 120.1953} -- 13 Garage public (pour les flics?)
 }
 
-local inGar = insideGarage[13] -- changer ce nombre pour changer de garage
+local inGar = insideGarage[4] -- changer ce nombre pour changer de garage
 
 --La liste des voitures qui doit etre declaré avant ce qu'il y a juste en dessous
 local CarList = {"adder","banshee2","bullet","cheetah","entityxf","sheava","fmj","infernus","osiris","le7b","reaper","sultanrs","t20","turismor","tyrus","vacca","voltic","prototipo","zentorno"}
