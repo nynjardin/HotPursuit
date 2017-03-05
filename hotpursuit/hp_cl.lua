@@ -26,7 +26,7 @@ local insideGarage = { --1 x, y, z, vehicleHeading, pedHeading
     {x = -693.727, y = -757.278, z = 33.684, vh = 228.2736, ph = 120.1953} -- 13 Garage public (pour les flics?)
 }
 
-local inGar = insideGarage[4] -- changer ce nombre pour changer de garage
+local inGar = insideGarage[13] -- changer ce nombre pour changer de garage
 
 --La liste des voitures qui doit etre declaré avant ce qu'il y a juste en dessous
 local CarList = {"adder","banshee2","bullet","cheetah","entityxf","sheava","fmj","infernus","osiris","le7b","reaper","sultanrs","t20","turismor","tyrus","vacca","voltic","prototipo","zentorno"}
@@ -92,66 +92,6 @@ end)
 
 --La liste des joueurs, récuperé sur https://github.com/jorjic/misc-fivereborn-scripts/blob/74675d15ed6be35dc03caafd68d53bd5a1e160e2/resources/jscoreboard/scoreboard.lua
 --En faire un autre a l'occasion, plus adapté (genre, a droite deja)
-local function DrawPlayerList()
-    local players = {}
-
-    for i = 0, 31 do
-        if NetworkIsPlayerActive( i ) then
-            table.insert( players, i )
-        end
-    end
-    
-    --Top bar
-    DrawRect( 0.11, 0.025, 0.2, 0.03, 0, 0, 0, 220 )
-    
-    --Top bar title
-    SetTextFont( 4 )
-    SetTextProportional( 0 )
-    SetTextScale( 0.45, 0.45 )
-    SetTextColour( 255, 255, 255, 255 )
-    SetTextDropShadow( 0, 0, 0, 0, 255 )
-    SetTextEdge( 1, 0, 0, 0, 255 )
-    SetTextEntry( "STRING" )
-    AddTextComponentString( "Players: " .. #players )
-    DrawText( 0.015, 0.007 )
-    
-    for k, v in pairs( scoret.ply ) do
-        local r
-        local g
-        local b
-        
-        if k % 2 == 0 then
-            r = 28
-            g = 47
-            b = 68
-        else
-            r = 38
-            g = 57
-            b = 74
-        end
-        
-        --Row BG
-        DrawRect( 0.11, 0.025 + ( k * 0.03 ), 0.2, 0.03, r, g, b, 220 )
-        
-        --Name Label
-        SetTextFont( 4 )
-        SetTextScale( 0.45, 0.45 )
-        SetTextColour( 255, 255, 255, 255 )
-        SetTextEntry( "STRING" )
-        AddTextComponentString( GetPlayerName( v ) )
-        DrawText( 0.015, 0.007 + ( k * 0.03 ) )
-        
-        --Talk Indicator
-        local transparency = 60
-        
-        if NetworkIsPlayerTalking( v ) then
-            transparency = 255
-        end
-        
-        DrawSprite( "mplobby", "mp_charcard_stats_icons9", 0.2, 0.024 + ( k * 0.03 ), 0.015, 0.025, 0, 255, 255, 255, transparency )
-    end
-end
-
 
 --function de l'ecran de fin qui attend le texte qui sera affiché et le type, victoire, defaite, ect...
 --la liste des type est trouvable ici: http://pastebin.com/dafBAjs0
@@ -644,7 +584,6 @@ Citizen.CreateThread(function()
             end
             if runInProgress then
                 DrawMarker(1, arrPos[1], arrPos[2], arrPos[3], 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 8.0, 8.0, 100.0, 178, 236, 93, 155, 0, 0, 2, 0, 0, 0, 0) --tant que le joueur n'est pas arivé, affiché ça dans le jeux
-                DrawPlayerList()
             end
         end
     end
